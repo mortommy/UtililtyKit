@@ -1,5 +1,4 @@
 import pathlib
-import psycopg2
 
 
 def load_pg_table_from_csv_file(connection, replace: bool, file_path_name: str, table_name: str, schema: str,
