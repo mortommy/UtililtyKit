@@ -16,7 +16,7 @@ def load_pg_table_from_csv_file(connection, replace: bool, file_path_name: str, 
     """
     cf = pathlib.Path(file_path_name)
     if not cf.exists():
-        raise Exception('File ' + file_path_name + 'does not exist.')
+        raise Exception('File ' + file_path_name + ' does not exist.')
     try:
         cur = connection.cursor()
         dest_table = table_name
