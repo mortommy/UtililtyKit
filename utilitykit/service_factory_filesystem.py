@@ -17,7 +17,7 @@ def move_file_to_zip_archive(file_name: str, sub_folder: str):
         if not os.path.exists(downloads_folder):
             os.makedirs(downloads_folder)
 
-        zip_file_name = os.path.splitext(file_name)[0] + '.zip'
+        zip_file_name = os.path.splitext(os.path.basename(file_name))[0] + '.zip'
         zip_file_path = os.path.join(downloads_folder, zip_file_name)
 
         if not os.path.exists(zip_file_path):
