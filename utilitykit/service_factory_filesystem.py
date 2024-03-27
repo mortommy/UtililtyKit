@@ -32,9 +32,9 @@ def move_file_to_zip_archive(file_name: str, sub_folder: str):
                 pass
 
         with zipfile.ZipFile(zip_file_path, 'a') as zipf:
-            zipf.write(file_path, os.path.basename(file_path))
+            zipf.write(csv_file_path, os.path.basename(csv_file_path))
 
-        os.remove(file_path)
+        os.remove(csv_file_path)
 
     else:
         raise Exception('File ' + file_path + ' does not exist.')
